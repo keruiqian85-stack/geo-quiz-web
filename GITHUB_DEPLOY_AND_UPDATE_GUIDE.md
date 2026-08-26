@@ -9,14 +9,14 @@
 - `ai_config.json` 未出现在 `git status` 或暂存区中
 - `python test_quiz.py` 通过
 - `questions_data.json` 与 `questions.js` 已同步
-- 已选择合适的软件许可证，并确认题目和图片具有发布权
+- `LICENSE` 文件存在，并确认题目和图片具有发布权
 
 首次提交时只添加本项目文件：
 
 ```bash
 git init
 git branch -M main
-git add .github .gitignore README.md GITHUB_DEPLOY_AND_UPDATE_GUIDE.md HOW_TO_UPDATE_QUESTIONS.md ai_config.example.json ai_generate_questions.py app.js favicon.svg generate_diagrams.py generate_diagrams_ext.py generate_questions.py images import_questions.py index.html new_questions_template.txt questions.js questions_data.json style.css test_quiz.py
+git add .github .gitignore LICENSE README.md GITHUB_DEPLOY_AND_UPDATE_GUIDE.md HOW_TO_UPDATE_QUESTIONS.md ai_config.example.json ai_generate_questions.py app.js favicon.svg generate_diagrams.py generate_diagrams_ext.py generate_questions.py images import_questions.py index.html new_questions_template.txt questions.js questions_data.json style.css test_quiz.py
 git commit -m "feat: publish geography quiz"
 git remote add origin https://github.com/YOUR_NAME/geo-quiz-web.git
 git push -u origin main
