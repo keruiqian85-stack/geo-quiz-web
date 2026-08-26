@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="100%">
+  <rect width="600" height="300" fill="#f0f9ff" rx="12"/>
+  <text x="300" y="26" font-size="15" font-weight="bold" fill="#0369a1" text-anchor="middle">世界大洋中低纬度环流模式（北顺南逆）示意图</text>
+  <!-- 赤道 -->
+  <line x1="40" y1="150" x2="560" y2="150" stroke="#dc2626" stroke-width="2"/>
+  <text x="50" y="145" font-size="11" font-weight="bold" fill="#dc2626">赤道 (0°)</text>
+
+  <!-- 北半球顺时针环流 -->
+  <g transform="translate(300, 90)">
+    <ellipse cx="0" cy="0" rx="140" ry="45" fill="none" stroke="#334155" stroke-width="1.5"/>
+    <text x="0" y="5" font-size="13" font-weight="bold" fill="#1e40af" text-anchor="middle">北半球：【顺时针】副热带大洋环流</text>
+    <!-- 西侧暖流 (红) -->
+    <path d="M -140 30 L -140 -20" fill="none" stroke="#dc2626" stroke-width="4"/>
+    <polygon points="-140,-20 -146,-10 -134,-10" fill="#dc2626"/>
+    <text x="-150" y="0" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="end">暖流(西岸)</text>
+
+    <!-- 东侧寒流 (蓝) -->
+    <path d="M 140 -20 L 140 30" fill="none" stroke="#0284c7" stroke-width="4"/>
+    <polygon points="140,30 134,20 146,20" fill="#0284c7"/>
+    <text x="150" y="0" font-size="11" font-weight="bold" fill="#0284c7">寒流(东岸)</text>
+  </g>
+
+  <!-- 南半球逆时针环流 -->
+  <g transform="translate(300, 210)">
+    <ellipse cx="0" cy="0" rx="140" ry="45" fill="none" stroke="#334155" stroke-width="1.5"/>
+    <text x="0" y="5" font-size="13" font-weight="bold" fill="#059669" text-anchor="middle">南半球：【逆时针】副热带大洋环流</text>
+  </g>
+</svg>

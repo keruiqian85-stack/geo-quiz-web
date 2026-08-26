@@ -1,0 +1,49 @@
+name: Sync and Update Geography Questions
+
+on:
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: 出题专题或模块名称
+        required: true
+        default: 自然地理基础要素
+        type: string
+      count:
+        description: 生成题目数量（1—20）
+        required: true
+        default: 5
+        type: number
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Generate and validate questions
+        env:
+          AI_API_KEY: ${{ secrets.AI_API_KEY }}
+          AI_BASE_URL: ${{ secrets.AI_BASE_URL }}
+          AI_MODEL: ${{ secrets.AI_MODEL }}
+          TOPIC: ${{ inputs.topic }}
+          QUESTION_COUNT: ${{ inputs.count }}
+        run: |
+          python ai_generate_questions.py "$TOPIC" "$QUESTION_COUNT"
+          python test_quiz.py
+
+      - name: Commit generated questions
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add questions_data.json questions.js
+          git diff --cached --quiet || git commit -m "content: update geography question bank"
+          git push

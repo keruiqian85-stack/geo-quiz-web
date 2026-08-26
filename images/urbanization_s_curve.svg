@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="100%">
+  <rect width="600" height="300" fill="#f8fafc" rx="12"/>
+  <text x="300" y="26" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">世界城镇化进程“S”形发展阶段曲线图</text>
+  <line x1="80" y1="240" x2="540" y2="240" stroke="#334155" stroke-width="2"/>
+  <line x1="80" y1="240" x2="80" y2="40" stroke="#334155" stroke-width="2"/>
+  <text x="545" y="245" font-size="11" fill="#64748b">时间</text>
+  <text x="75" y="38" font-size="11" fill="#64748b" text-anchor="end">城镇化水平 (%)</text>
+
+  <!-- 30% 和 70% 界线 -->
+  <line x1="80" y1="180" x2="540" y2="180" stroke="#94a3b8" stroke-dasharray="3,3"/>
+  <text x="55" y="185" font-size="11" fill="#64748b">30%</text>
+  <line x1="80" y1="90" x2="540" y2="90" stroke="#94a3b8" stroke-dasharray="3,3"/>
+  <text x="55" y="95" font-size="11" fill="#64748b">70%</text>
+
+  <!-- S型曲线 -->
+  <path d="M 80 230 Q 180 220 250 160 T 420 80 L 520 70" fill="none" stroke="#2563eb" stroke-width="4"/>
+
+  <!-- 三个阶段标注 -->
+  <text x="150" y="210" font-size="12" font-weight="bold" fill="#0284c7">初期阶段 (&lt;30%)</text>
+  <text x="270" y="130" font-size="12" font-weight="bold" fill="#dc2626">加速阶段 (30%-70%)</text>
+  <text x="440" y="60" font-size="12" font-weight="bold" fill="#16a34a">后期成熟阶段 (&gt;70%)</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="100%">
+  <rect width="600" height="300" fill="#f8fafc" rx="12"/>
+  <text x="300" y="26" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">我国重大资源跨区域调配战略工程示意图</text>
+  <g transform="translate(60, 50)">
+    <!-- 西部输出区 -->
+    <rect x="0" y="30" width="160" height="120" rx="8" fill="#fef08a" stroke="#ca8a04" stroke-width="2"/>
+    <text x="80" y="70" font-size="14" font-weight="bold" fill="#854d0e" text-anchor="middle">西部资源富集区</text>
+    <text x="80" y="95" font-size="11" fill="#a16207" text-anchor="middle">(能源/水电/天然气充足)</text>
+    <text x="80" y="125" font-size="11" font-weight="bold" fill="#16a34a" text-anchor="middle">资源优势 ➔ 经济优势</text>
+
+    <!-- 东部受水/受电区 -->
+    <rect x="320" y="30" width="160" height="120" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="400" y="70" font-size="14" font-weight="bold" fill="#1e40af" text-anchor="middle">东部经济发达区</text>
+    <text x="400" y="95" font-size="11" fill="#1d4ed8" text-anchor="middle">(能源/水资源需求缺口大)</text>
+    <text x="400" y="125" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">缓解能源紧张/改善环境</text>
+
+    <!-- 输送箭头 -->
+    <path d="M 160 80 L 320 80" fill="none" stroke="#dc2626" stroke-width="5"/>
+    <polygon points="320,80 308,73 308,87" fill="#dc2626"/>
+    <text x="240" y="70" font-size="12" font-weight="bold" fill="#dc2626" text-anchor="middle">西气东输 / 西电东送</text>
+  </g>
+</svg>

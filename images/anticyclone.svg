@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="100%" height="100%">
+  <rect width="600" height="320" fill="#f8fafc" rx="12"/>
+  <text x="300" y="28" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">北半球反气旋（高气压）气流运动与天气示意图</text>
+
+  <!-- 中心高压 -->
+  <circle cx="300" cy="160" r="45" fill="#fef08a" stroke="#ca8a04" stroke-width="2"/>
+  <text x="300" y="166" font-size="22" font-weight="bold" fill="#854d0e" text-anchor="middle">高 (H)</text>
+
+  <!-- 顺时针辐散等压线 -->
+  <circle cx="300" cy="160" r="85" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="390" y="165" font-size="11" fill="#64748b">1015hPa</text>
+  <circle cx="300" cy="160" r="125" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="430" y="165" font-size="11" fill="#64748b">1010hPa</text>
+
+  <!-- 四周顺时针辐散箭头 -->
+  <!-- 上 (向右偏) -->
+  <path d="M 300 110 Q 340 70 380 75" fill="none" stroke="#ea580c" stroke-width="3"/>
+  <polygon points="380,75 368,70 371,82" fill="#ea580c"/>
+
+  <!-- 右 (向下偏) -->
+  <path d="M 350 160 Q 390 200 385 240" fill="none" stroke="#ea580c" stroke-width="3"/>
+  <polygon points="385,240 380,228 392,231" fill="#ea580c"/>
+
+  <!-- 下 (向左偏) -->
+  <path d="M 300 210 Q 260 250 220 245" fill="none" stroke="#ea580c" stroke-width="3"/>
+  <polygon points="220,245 232,250 229,238" fill="#ea580c"/>
+
+  <!-- 左 (向上偏) -->
+  <path d="M 250 160 Q 210 120 215 80" fill="none" stroke="#ea580c" stroke-width="3"/>
+  <polygon points="215,80 220,92 208,89" fill="#ea580c"/>
+
+  <!-- 提示条 -->
+  <rect x="50" y="270" width="500" height="36" rx="6" fill="#fef9c3" stroke="#eab308"/>
+  <text x="300" y="293" font-size="13" font-weight="bold" fill="#854d0e" text-anchor="middle">水平方向：顺时针辐散；垂直方向：中心气流下沉增温 ➔ 天气晴朗干燥</text>
+</svg>

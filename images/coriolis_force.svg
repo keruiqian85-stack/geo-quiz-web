@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="100%">
+  <rect width="600" height="300" fill="#f8fafc" rx="12"/>
+  <text x="300" y="26" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">地球自转偏向力在南、北半球的偏转规律示意图</text>
+  <!-- 赤道 -->
+  <line x1="60" y1="150" x2="540" y2="150" stroke="#dc2626" stroke-width="2"/>
+  <text x="545" y="155" font-size="12" font-weight="bold" fill="#dc2626">赤道 (0° 无偏转)</text>
+
+  <!-- 北半球向右偏 -->
+  <g transform="translate(100, 60)">
+    <text x="80" y="0" font-size="13" font-weight="bold" fill="#2563eb" text-anchor="middle">【北半球：顺运动方向向右偏】</text>
+    <line x1="80" y1="70" x2="80" y2="20" stroke="#94a3b8" stroke-width="2" stroke-dasharray="3,3"/>
+    <path d="M 80 70 Q 80 40 120 20" fill="none" stroke="#2563eb" stroke-width="4"/>
+    <polygon points="120,20 108,24 114,32" fill="#2563eb"/>
+    <text x="130" y="35" font-size="11" fill="#2563eb">实际风向(右偏)</text>
+  </g>
+
+  <!-- 南半球向左偏 -->
+  <g transform="translate(360, 170)">
+    <text x="80" y="100" font-size="13" font-weight="bold" fill="#059669" text-anchor="middle">【南半球：顺运动方向向左偏】</text>
+    <line x1="80" y1="20" x2="80" y2="70" stroke="#94a3b8" stroke-width="2" stroke-dasharray="3,3"/>
+    <path d="M 80 20 Q 80 50 120 70" fill="none" stroke="#059669" stroke-width="4"/>
+    <polygon points="120,70 114,58 108,66" fill="#059669"/>
+    <text x="130" y="65" font-size="11" fill="#059669">实际风向(左偏)</text>
+  </g>
+</svg>

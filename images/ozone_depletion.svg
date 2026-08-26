@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="100%">
+  <rect width="600" height="300" fill="#090d16" rx="12"/>
+  <text x="300" y="26" font-size="15" font-weight="bold" fill="#f8fafc" text-anchor="middle">平流层臭氧层破坏与紫外线吸收减弱示意图</text>
+  <!-- 太阳紫外线 -->
+  <circle cx="60" cy="80" r="30" fill="#f59e0b"/>
+  <text x="60" y="85" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">太阳</text>
+  <!-- 臭氧层 -->
+  <rect x="140" y="90" width="400" height="40" rx="4" fill="#38bdf8" opacity="0.6"/>
+  <text x="340" y="115" font-size="13" font-weight="bold" fill="#0369a1" text-anchor="middle">平流层臭氧层 (吸收大部分紫外线)</text>
+
+  <!-- 氟氯烃破坏孔洞 -->
+  <ellipse cx="440" cy="110" rx="40" ry="20" fill="#090d16" stroke="#ef4444" stroke-width="2"/>
+  <text x="440" y="115" font-size="10" font-weight="bold" fill="#ef4444" text-anchor="middle">臭氧空洞</text>
+  <text x="440" y="145" font-size="10" fill="#f87171">氟氯烃(CFCs)破坏</text>
+
+  <!-- 紫外线直达地面 -->
+  <path d="M 440 120 L 440 230" fill="none" stroke="#fbbf24" stroke-width="4"/>
+  <polygon points="440,230 434,218 446,218" fill="#fbbf24"/>
+  <text x="440" y="250" font-size="11" font-weight="bold" fill="#fbbf24" text-anchor="middle">过量有害紫外线直射地表</text>
+</svg>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>高中地理全套教材智能刷题与自测系统</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!-- 模态框：粘贴快速导入试题 -->
+    <div id="importModal" class="modal-backdrop" style="display: none;">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3>📥 快速粘贴导入高中地理新题目</h3>
+          <button id="closeModalBtn" class="close-btn">✕</button>
+        </div>
+        <div class="modal-body">
+          <p class="modal-desc">
+            您可以直接把<strong>大模型生成的一组试题 JSON 或文本</strong>直接粘贴在下方，系统会自动解析并扩充到本次题库中：
+          </p>
+          <textarea id="importTextarea" class="import-textarea" placeholder="例如粘贴大模型生成的 JSON 数组：
+[
+  {
+    &quot;category&quot;: &quot;自然地理&quot;,
+    &quot;book&quot;: &quot;选择性必修1&quot;,
+    &quot;question&quot;: &quot;北半球夏至日时，正午太阳高度角的分布规律是（ ）&quot;,
+    &quot;options&quot;: [&quot;由赤道向两极递减&quot;, &quot;由北回归线向南北两侧递减&quot;, &quot;由南回归线向两侧递减&quot;, &quot;全球各地相等&quot;],
+    &quot;answer&quot;: 1,
+    &quot;explanation&quot;: &quot;夏至日太阳直射北回归线，正午太阳高度由北回归线向南北两侧递减。&quot;
+  }
+]"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button id="cancelModalBtn" class="btn-secondary">取消</button>
+          <button id="confirmImportBtn" class="btn-primary">确认并导入题库</button>
+        </div>
+      </div>
+    </div>
+    <!-- 顶部导航栏 -->
+    <header class="app-header">
+      <div class="header-left">
+        <div class="logo-icon">🌍</div>
+        <div class="brand-text">
+          <h1>高中地理全教材题库</h1>
+          <span class="sub-title"><span data-question-total>0</span>题高考精要 · 随机实战 · 即时解析</span>
+        </div>
+      </div>
+      <div class="header-right">
+        <button id="themeToggleBtn" class="icon-btn" title="切换暗色/明亮模式">🌓</button>
+        <button id="restartNavBtn" class="nav-btn" style="display:none;">退出重选</button>
+      </div>
+    </header>
+
+    <!-- 视图1: 选题及开始界面 -->
+    <main id="setupView" class="view-panel active">
+      <div class="welcome-card">
+        <div class="badge">高考地理知识体系精炼</div>
+        <h2>选择你的复习训练模式</h2>
+        <p class="desc">
+          题库依据现行高中地理课程标准构建，涵盖<strong>必修第一册（自然要素）</strong>、<strong>必修第二册（人文与城乡）</strong>、<strong>选择性必修1（自然基础）</strong>、<strong>选择性必修2（区域发展）</strong>、<strong>选择性必修3（资源与国家安全）</strong>及<strong>区域综合专题</strong>共<span data-question-total>0</span>道四选一单选题。
+        </p>
+
+        <div class="config-section">
+          <h3>1. 选择本轮做题数量</h3>
+          <div class="mode-grid">
+            <label class="mode-card">
+              <input type="radio" name="quizCount" value="20" checked>
+              <div class="card-body">
+                <span class="count-tag">20 题</span>
+                <span class="mode-title">⚡ 极速冲刺练</span>
+                <span class="mode-desc">约 10-15 分钟，适合快速保持手感</span>
+              </div>
+            </label>
+
+            <label class="mode-card">
+              <input type="radio" name="quizCount" value="30">
+              <div class="card-body">
+                <span class="count-tag">30 题</span>
+                <span class="mode-title">🎯 标准模拟卷</span>
+                <span class="mode-desc">约 15-20 分钟，适合单次强化训练</span>
+              </div>
+            </label>
+
+            <label class="mode-card">
+              <input type="radio" name="quizCount" value="all">
+              <div class="card-body highlight-card">
+                <span class="count-tag full-tag"><span data-question-total>0</span> 题</span>
+                <span class="mode-title">🏆 完整全真通关</span>
+                <span class="mode-desc">全教材 <span data-question-total>0</span> 题全量覆盖，极限自测</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="config-section">
+          <h3>2. 范围筛选</h3>
+          <div class="category-chips" id="categoryFilterGroup">
+            <button class="chip active" data-cat="all">全部模块 (<span data-question-total>0</span>题)</button>
+            <button class="chip" data-cat="自然地理">自然地理 (必修一)</button>
+            <button class="chip" data-cat="人文地理">人文地理 (必修二)</button>
+            <button class="chip" data-cat="选择性必修1">选必一 (自然基础)</button>
+            <button class="chip" data-cat="选择性必修2">选必二 (区域发展)</button>
+            <button class="chip" data-cat="选择性必修3">选必三 (资源安全)</button>
+            <button class="chip" data-cat="区域地理">区域专题 (中国/世界)</button>
+          </div>
+        </div>
+
+        <div class="config-section feature-pills">
+          <div class="pill">🎲 题目及4个选项均随机打乱</div>
+          <div class="pill">💡 单选后立即反馈对错与官方解析</div>
+          <div class="pill">⏱️ 左下角精准计时，记录作答耗时</div>
+          <div class="pill">📊 最终出具成绩单与错题本回顾</div>
+        </div>
+
+        <div class="start-action-wrap">
+          <button id="startQuizBtn" class="btn-primary-large">🚀 开启本轮随机测试</button>
+        </div>
+
+        <!-- 历史做题记录与错题本 (持久化存储) -->
+        <div id="homeHistorySection" class="home-history-section" style="display: none;">
+          <div class="history-header">
+            <h3>📜 历史做题战绩与错题本</h3>
+            <div class="history-actions">
+              <button id="importPasteBtn" class="btn-text-ai" title="直接粘贴文本/AI生成的一组试题导入">📥 粘贴快速导入试题</button>
+              <button id="clearHistoryBtn" class="btn-text-danger" title="清空全部本地做题记录">🗑️ 清空历史</button>
+            </div>
+          </div>
+          <div class="history-summary-bar">
+            <div class="summary-pill">累计刷题轮次：<b id="histTotalRounds">0</b> 轮</div>
+            <div class="summary-pill">累计作答：<b id="histTotalAnswered">0</b> 题</div>
+            <div class="summary-pill">历史平均正确率：<b id="histAvgAccuracy">0%</b></div>
+            <div class="summary-pill highlight">累计错题库：<b id="histTotalWrongPool">0</b> 道</div>
+          </div>
+          <div id="historyLogList" class="history-log-list">
+            <!-- 动态渲染历史各轮次卡片 -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- 视图2: 做题界面 -->
+    <main id="quizView" class="view-panel">
+      <!-- 进度指示条 -->
+      <div class="progress-bar-wrap">
+        <div class="progress-info">
+          <span class="progress-text">进度：<b id="currentQNum">1</b> / <span id="totalQNum">20</span></span>
+          <span class="score-live-badge">已得得分：<b id="liveCorrectCount">0</b> 正确 / <span id="liveAnsweredCount">0</span> 已答</span>
+        </div>
+        <div class="progress-track">
+          <div id="progressFill" class="progress-fill" style="width: 5%;"></div>
+        </div>
+      </div>
+
+      <!-- 试题主卡片 -->
+      <article class="question-card" id="questionCard">
+        <div class="question-header">
+          <span id="questionTagCategory" class="tag-cat">自然地理</span>
+          <span id="questionTagBook" class="tag-book">必修一</span>
+          <span id="questionOriginalId" class="tag-id">原题号 #1</span>
+        </div>
+
+        <h3 id="questionText" class="question-title">题目加载中...</h3>
+
+        <!-- 示意图容器 (如果有配图则动态显示) -->
+        <div id="questionImageWrap" class="question-image-wrap" style="display:none;">
+          <img id="questionImage" src="" alt="试题地理示意图" />
+        </div>
+
+        <div class="options-container" id="optionsContainer">
+          <!-- 动态注入4个选项按钮 -->
+        </div>
+
+        <!-- 即时解析区域 (选完答案后展示) -->
+        <div id="analysisBox" class="analysis-box" style="display:none;">
+          <div class="analysis-header" id="analysisHeader">
+            <span class="status-icon" id="statusIcon">✓</span>
+            <span class="status-text" id="statusText">回答正确！</span>
+            <span class="correct-hint" id="correctHint"></span>
+          </div>
+          <div class="analysis-content">
+            <h4>【考点深度解析】</h4>
+            <p id="analysisText">解析内容加载中...</p>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- 视图3: 最终结算报告界面 -->
+    <main id="resultView" class="view-panel">
+      <div class="result-card">
+        <div class="result-badge">测试完成 · 成绩总结</div>
+        <h2 id="resultTitle">恭喜完成本次地理测试！</h2>
+
+        <div class="score-dashboard">
+          <div class="score-circle">
+            <div class="score-number" id="finalScorePercent">0%</div>
+            <div class="score-label">正确率</div>
+          </div>
+          <div class="metrics-grid">
+            <div class="metric-item">
+              <span class="metric-val" id="resCorrect">0</span>
+              <span class="metric-name">答对题数</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-val" id="resWrong">0</span>
+              <span class="metric-name">答错题数</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-val" id="resTotal">0</span>
+              <span class="metric-name">总作答数</span>
+            </div>
+            <div class="metric-item highlight-metric">
+              <span class="metric-val" id="resTime">00:00</span>
+              <span class="metric-name">⏱️ 总耗时</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="result-evaluation" id="resultEvaluation">
+          <!-- 评语与针对性建议 -->
+        </div>
+
+        <div class="result-actions">
+          <button id="toggleReviewBtn" class="btn-secondary">📖 查看全部做题记录与错题解析</button>
+          <button id="retryBtn" class="btn-primary">🔄 再来一轮全新随机测验</button>
+          <button id="backHomeBtn" class="btn-home">🏠 返回首页重新选题</button>
+        </div>
+
+        <!-- 详细错题/做题记录清单 -->
+        <div id="reviewSection" class="review-section" style="display:none;">
+          <h3>📋 本轮详细试题分析与错题回顾</h3>
+          <div class="review-filter-tabs">
+            <button class="tab active" data-filter="all">全部题目 (<span id="tabCountAll">0</span>)</button>
+            <button class="tab" data-filter="wrong">仅看错题 (<span id="tabCountWrong">0</span>)</button>
+            <button class="tab" data-filter="correct">仅看答对 (<span id="tabCountCorrect">0</span>)</button>
+          </div>
+          <div id="reviewList" class="review-list">
+            <!-- 动态生成每道题的详情卡片 -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- 底部固定控制条 (在做题时显示左下角计时器与右下角下一题按钮) -->
+    <footer id="quizFooter" class="quiz-footer" style="display: none;">
+      <div class="footer-left-timer">
+        <span class="timer-icon">⏱️</span>
+        <span class="timer-label">用时：</span>
+        <span id="timerDisplay" class="timer-digits">00:00</span>
+      </div>
+
+      <div class="footer-center-hint" id="footerHint">
+        请点击上方选项作答
+      </div>
+
+      <div class="footer-right-action">
+        <button id="nextBtn" class="btn-next" disabled>
+          下一题 ➔
+        </button>
+      </div>
+    </footer>
+  </div>
+
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

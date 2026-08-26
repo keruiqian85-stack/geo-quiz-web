@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="100%">
+  <rect width="600" height="300" fill="#f8fafc" rx="12"/>
+  <text x="300" y="26" font-size="15" font-weight="bold" fill="#0369a1" text-anchor="middle">河流入海口三角洲与平原牛轭湖发育示意图</text>
+  <!-- 左：平原牛轭湖 -->
+  <g transform="translate(30, 50)">
+    <text x="120" y="20" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">【平原河曲与牛轭湖】</text>
+    <path d="M 20 60 Q 120 60 120 120 Q 120 180 20 180" fill="none" stroke="#38bdf8" stroke-width="12"/>
+    <!-- 截弯取直新河道 -->
+    <line x1="20" y1="60" x2="20" y2="180" stroke="#0284c7" stroke-width="10"/>
+    <text x="140" y="125" font-size="11" font-weight="bold" fill="#dc2626">废弃曲流 ➔ 牛轭湖</text>
+  </g>
+  <!-- 右：河口三角洲 -->
+  <g transform="translate(320, 50)">
+    <text x="120" y="20" font-size="13" font-weight="bold" fill="#0369a1" text-anchor="middle">【河口三角洲】</text>
+    <!-- 海洋与泥沙堆积体 -->
+    <rect x="140" y="40" width="100" height="180" fill="#bae6fd" rx="4"/>
+    <polygon points="20,130 140,50 140,210" fill="#fed7aa" stroke="#ca8a04" stroke-width="2"/>
+    <text x="190" y="135" font-size="13" font-weight="bold" fill="#0369a1">海洋</text>
+    <text x="80" y="135" font-size="12" font-weight="bold" fill="#9a3412">泥沙三角洲</text>
+  </g>
+</svg>

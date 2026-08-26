@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="100%">
+  <rect width="600" height="300" fill="#f8fafc" rx="12"/>
+  <text x="300" y="26" font-size="15" font-weight="bold" fill="#0369a1" text-anchor="middle">大洋表层海水盐度随纬度分布曲线图</text>
+  <line x1="60" y1="240" x2="550" y2="240" stroke="#334155" stroke-width="2"/>
+  <line x1="60" y1="240" x2="60" y2="40" stroke="#334155" stroke-width="2"/>
+  <!-- 纬度刻度 -->
+  <text x="80" y="258" font-size="11" fill="#64748b">60°S</text>
+  <text x="180" y="258" font-size="11" fill="#64748b">30°S</text>
+  <text x="300" y="258" font-size="11" font-weight="bold" fill="#dc2626">赤道 (0°)</text>
+  <text x="420" y="258" font-size="11" fill="#64748b">30°N</text>
+  <text x="520" y="258" font-size="11" fill="#64748b">60°N</text>
+
+  <!-- 盐度双峰曲线 -->
+  <path d="M 80 200 Q 180 60 300 130 Q 420 50 520 210" fill="none" stroke="#2563eb" stroke-width="4"/>
+  <circle cx="180" cy="88" r="5" fill="#dc2626"/>
+  <text x="180" y="75" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">副热带高盐区</text>
+  <circle cx="420" cy="80" r="5" fill="#dc2626"/>
+  <text x="420" y="68" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">副热带高盐区</text>
+  <circle cx="300" cy="130" r="5" fill="#0284c7"/>
+  <text x="300" y="155" font-size="11" fill="#0284c7" text-anchor="middle">赤道多雨鞍部</text>
+
+  <rect x="50" y="268" width="500" height="24" rx="4" fill="#e0f2fe"/>
+  <text x="300" y="284" font-size="11" fill="#0369a1" text-anchor="middle">规律：从副热带海区向南北两侧的高低纬度递减（副热带蒸发量远大于降水量）</text>
+</svg>

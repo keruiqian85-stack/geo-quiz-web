@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="100%">
+  <rect width="600" height="300" fill="#f8fafc" rx="12"/>
+  <text x="300" y="26" font-size="15" font-weight="bold" fill="#0369a1" text-anchor="middle">离岸信风与上升补偿流（秘鲁渔场）形成示意图</text>
+  <!-- 南美大陆与海洋 -->
+  <polygon points="420,70 580,70 580,260 420,260" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
+  <text x="500" y="160" font-size="15" font-weight="bold" fill="#9a3412" text-anchor="middle">南美大陆</text>
+  <!-- 海洋水体 -->
+  <rect x="40" y="100" width="380" height="160" fill="#7dd3fc" opacity="0.8"/>
+
+  <!-- 离岸东南信风 (从陆吹向海) -->
+  <path d="M 460 90 L 320 90" fill="none" stroke="#2563eb" stroke-width="4"/>
+  <polygon points="320,90 332,84 332,96" fill="#2563eb"/>
+  <text x="390" y="80" font-size="12" font-weight="bold" fill="#2563eb">离岸风 (东南信风)</text>
+
+  <!-- 表层海水离岸流动 -->
+  <path d="M 400 120 L 220 120" fill="none" stroke="#0369a1" stroke-width="3"/>
+  <polygon points="220,120 230,115 230,125" fill="#0369a1"/>
+  <text x="300" y="140" font-size="11" fill="#0369a1">表层海水离岸而去</text>
+
+  <!-- 深层上升补偿流 -->
+  <path d="M 160 240 Q 360 240 380 140" fill="none" stroke="#dc2626" stroke-width="4"/>
+  <polygon points="380,140 374,152 386,150" fill="#dc2626"/>
+  <text x="240" y="220" font-size="12" font-weight="bold" fill="#dc2626">深层冷海水上升补偿 (带来丰富营养盐类)</text>
+  <text x="320" y="165" font-size="12" font-weight="bold" fill="#15803d">🐟 浮游生物繁盛 ➔ 世界大渔场</text>
+</svg>

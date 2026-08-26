@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="100%">
+  <rect width="600" height="300" fill="#f8fafc" rx="12"/>
+  <text x="300" y="26" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">中国地势三级阶梯自西向东阶梯剖面示意图</text>
+  <!-- 阶梯台阶 -->
+  <!-- 第一级阶梯 (青藏高原 >4000m) -->
+  <polygon points="60,70 200,70 200,240 60,240" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
+  <text x="130" y="110" font-size="13" font-weight="bold" fill="#9a3412" text-anchor="middle">第一级阶梯</text>
+  <text x="130" y="135" font-size="11" fill="#c2410c" text-anchor="middle">青藏高原 (&gt;4000m)</text>
+
+  <!-- 第二级阶梯 (1000-2000m) -->
+  <polygon points="200,130 380,130 380,240 200,240" fill="#fde68a" stroke="#ca8a04" stroke-width="2"/>
+  <text x="290" y="165" font-size="13" font-weight="bold" fill="#854d0e" text-anchor="middle">第二级阶梯</text>
+  <text x="290" y="185" font-size="11" fill="#a16207" text-anchor="middle">四大高原/四大盆地</text>
+
+  <!-- 第三级阶梯 (<500m 平原丘陵) -->
+  <polygon points="380,190 540,190 540,240 380,240" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/>
+  <text x="460" y="215" font-size="13" font-weight="bold" fill="#15803d" text-anchor="middle">第三级阶梯</text>
+  <text x="460" y="232" font-size="10" fill="#166534" text-anchor="middle">东北/华北/长江中下游平原</text>
+
+  <!-- 水能集中界线 -->
+  <text x="200" y="60" font-size="10" font-weight="bold" fill="#dc2626" text-anchor="middle">昆仑-祁连-横断</text>
+  <text x="380" y="120" font-size="10" font-weight="bold" fill="#dc2626" text-anchor="middle">大兴安岭-太行-巫山-雪峰</text>
+</svg>

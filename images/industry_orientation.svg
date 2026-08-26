@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="100%">
+  <rect width="600" height="300" fill="#f8fafc" rx="12"/>
+  <text x="300" y="26" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">工业五大主导区位指向类型示意图</text>
+  <g transform="translate(60, 45)" font-size="12">
+    <!-- 1. 原料指向型 -->
+    <rect x="0" y="10" width="220" height="38" rx="6" fill="#fed7aa" stroke="#ea580c"/>
+    <text x="110" y="34" font-weight="bold" fill="#9a3412" text-anchor="middle">🍎 原料导向型 (如制糖厂、水产加工)</text>
+
+    <!-- 2. 市场指向型 -->
+    <rect x="0" y="60" width="220" height="38" rx="6" fill="#dbeafe" stroke="#2563eb"/>
+    <text x="110" y="84" font-weight="bold" fill="#1e40af" text-anchor="middle">🍺 市场导向型 (如啤酒厂、家具制造)</text>
+
+    <!-- 3. 动力指向型 -->
+    <rect x="0" y="110" width="220" height="38" rx="6" fill="#fef08a" stroke="#ca8a04"/>
+    <text x="110" y="134" font-weight="bold" fill="#854d0e" text-anchor="middle">⚡ 动力导向型 (如电解铝、重化工)</text>
+
+    <!-- 4. 劳动力指向型 -->
+    <rect x="260" y="35" width="220" height="38" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="370" y="59" font-weight="bold" fill="#166534" text-anchor="middle">🧵 劳动力导向型 (如普通服装组装)</text>
+
+    <!-- 5. 技术指向型 -->
+    <rect x="260" y="90" width="220" height="38" rx="6" fill="#f3e8ff" stroke="#9333ea"/>
+    <text x="370" y="114" font-weight="bold" fill="#6b21a8" text-anchor="middle">🔬 技术导向型 (如集成电路、航空航天)</text>
+  </g>
+  <rect x="40" y="240" width="520" height="30" rx="4" fill="#e2e8f0"/>
+  <text x="300" y="260" font-size="12" fill="#334155" text-anchor="middle">主导原则：选址在投入产出综合成本最低、经济与环境综合效益最大的地点。</text>
+</svg>

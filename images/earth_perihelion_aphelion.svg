@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="100%">
+  <rect width="600" height="300" fill="#090d16" rx="12"/>
+  <text x="300" y="26" font-size="15" font-weight="bold" fill="#f8fafc" text-anchor="middle">地球公转轨道近日点与远日点速度变化示意图</text>
+  <!-- 太阳偏心位置 -->
+  <circle cx="240" cy="150" r="28" fill="#f59e0b" stroke="#fbbf24" stroke-width="2"/>
+  <text x="240" y="155" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">太阳</text>
+  <!-- 椭圆轨道 -->
+  <ellipse cx="300" cy="150" rx="220" ry="90" fill="none" stroke="#475569" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- 左：近日点 (1月初) -->
+  <g transform="translate(80, 150)">
+    <circle cx="0" cy="0" r="14" fill="#38bdf8"/>
+    <text x="0" y="-22" font-size="12" font-weight="bold" fill="#fde047" text-anchor="middle">【近日点】(1月初)</text>
+    <text x="0" y="30" font-size="11" fill="#f87171" text-anchor="middle">公转角速度/线速度【最快】</text>
+  </g>
+
+  <!-- 右：远日点 (7月初) -->
+  <g transform="translate(520, 150)">
+    <circle cx="0" cy="0" r="14" fill="#38bdf8"/>
+    <text x="0" y="-22" font-size="12" font-weight="bold" fill="#93c5fd" text-anchor="middle">【远日点】(7月初)</text>
+    <text x="0" y="30" font-size="11" fill="#93c5fd" text-anchor="middle">公转角速度/线速度【最慢】</text>
+  </g>
+</svg>

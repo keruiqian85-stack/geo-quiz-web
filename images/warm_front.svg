@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="100%">
+  <rect width="600" height="300" fill="#f8fafc" rx="12"/>
+  <text x="300" y="26" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">暖锋天气系统结构与连续性降水区域示意图</text>
+  <line x1="0" y1="240" x2="600" y2="240" stroke="#334155" stroke-width="2.5"/>
+  <rect x="0" y="240" width="600" height="60" fill="#e2e8f0"/>
+  <!-- 锋面平缓爬升 -->
+  <path d="M 120 240 L 480 80" fill="none" stroke="#dc2626" stroke-width="3.5"/>
+  <!-- 暖气团主动爬升 -->
+  <path d="M 0 240 L 120 240 L 480 80 L 0 80 Z" fill="#fee2e2" opacity="0.7"/>
+  <text x="140" y="160" font-size="15" font-weight="bold" fill="#dc2626">暖气团 (主动爬升)</text>
+  <!-- 冷气团后退回流 -->
+  <text x="440" y="200" font-size="14" font-weight="bold" fill="#1e40af">冷气团 (被迫后退)</text>
+  <!-- 锋前雨区 -->
+  <rect x="330" y="250" width="150" height="24" rx="4" fill="#0284c7"/>
+  <text x="405" y="267" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">🌧️ 降水主要在【锋前】(连续性阴雨)</text>
+</svg>

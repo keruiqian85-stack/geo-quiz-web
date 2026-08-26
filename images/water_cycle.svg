@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="100%" height="100%">
+  <rect width="600" height="320" fill="#f8fafc" rx="12"/>
+  <text x="300" y="26" font-size="16" font-weight="bold" fill="#0284c7" text-anchor="middle">海陆间水循环各环节示意图</text>
+
+  <!-- 山地与陆地 -->
+  <polygon points="0,210 120,130 240,200 380,240 380,320 0,320" fill="#86efac"/>
+  <!-- 海洋 -->
+  <rect x="380" y="240" width="220" height="80" fill="#38bdf8"/>
+  <text x="490" y="280" font-size="15" font-weight="bold" fill="#0369a1" text-anchor="middle">海 洋</text>
+  <text x="120" y="270" font-size="15" font-weight="bold" fill="#15803d" text-anchor="middle">陆 地</text>
+
+  <!-- 云朵 -->
+  <g fill="#cbd5e1">
+    <ellipse cx="480" cy="90" rx="35" ry="20"/>
+    <ellipse cx="505" cy="85" rx="25" ry="18"/>
+    <ellipse cx="200" cy="80" rx="40" ry="22"/>
+    <ellipse cx="230" cy="75" rx="30" ry="18"/>
+  </g>
+
+  <!-- 水汽输送箭头 -->
+  <path d="M 450 85 L 260 80" fill="none" stroke="#2563eb" stroke-width="4"/>
+  <polygon points="260,80 272,74 272,86" fill="#2563eb"/>
+  <text x="355" y="70" font-size="13" font-weight="bold" fill="#2563eb" text-anchor="middle">① 水汽输送</text>
+
+  <!-- 海洋蒸发 -->
+  <path d="M 490 230 L 490 120" fill="none" stroke="#0284c7" stroke-width="3" stroke-dasharray="5,4"/>
+  <polygon points="490,120 485,130 495,130" fill="#0284c7"/>
+  <text x="500" y="170" font-size="12" font-weight="bold" fill="#0284c7">蒸发</text>
+
+  <!-- 陆地降水 -->
+  <path d="M 190 110 L 190 180" fill="none" stroke="#0ea5e9" stroke-width="3" stroke-dasharray="3,3"/>
+  <polygon points="190,180 185,170 195,170" fill="#0ea5e9"/>
+  <text x="140" y="150" font-size="12" font-weight="bold" fill="#0ea5e9">② 降水</text>
+
+  <!-- 地表径流 -->
+  <path d="M 180 190 L 375 245" fill="none" stroke="#0284c7" stroke-width="4"/>
+  <polygon points="375,245 362,238 365,250" fill="#0284c7"/>
+  <rect x="220" y="210" width="130" height="22" rx="4" fill="#0284c7"/>
+  <text x="285" y="226" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">③ 地表径流 (人类影响最显著)</text>
+
+  <!-- 地下径流与下渗 -->
+  <path d="M 160 220 L 160 255" fill="none" stroke="#d97706" stroke-width="2"/>
+  <text x="170" y="245" font-size="11" fill="#b45309">下渗</text>
+  <path d="M 180 270 L 380 280" fill="none" stroke="#b45309" stroke-width="3" stroke-dasharray="4,4"/>
+  <polygon points="380,280 368,274 368,286" fill="#b45309"/>
+  <text x="280" y="295" font-size="11" font-weight="bold" fill="#b45309" text-anchor="middle">④ 地下径流</text>
+</svg>

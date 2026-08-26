@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="100%">
+  <rect width="600" height="300" fill="#f8fafc" rx="12"/>
+  <text x="300" y="26" font-size="15" font-weight="bold" fill="#dc2626" text-anchor="middle">厄尔尼诺现象发生时赤道太平洋海气相互作用示意图</text>
+  <!-- 西太平洋(印尼/澳洲) 与 东太平洋(南美西岸) -->
+  <rect x="40" y="160" width="110" height="90" fill="#bbf7d0" rx="6"/>
+  <text x="95" y="200" font-size="12" font-weight="bold" fill="#166534" text-anchor="middle">西太平洋</text>
+  <text x="95" y="220" font-size="10" fill="#dc2626" text-anchor="middle">下沉气流 · 干旱山火</text>
+
+  <rect x="450" y="160" width="110" height="90" fill="#fed7aa" rx="6"/>
+  <text x="505" y="200" font-size="12" font-weight="bold" fill="#9a3412" text-anchor="middle">东太平洋 (南美)</text>
+  <text x="505" y="220" font-size="10" fill="#2563eb" text-anchor="middle">上升气流 · 暴雨洪涝</text>
+
+  <!-- 沃克环流逆转 -->
+  <ellipse cx="300" cy="110" rx="150" ry="40" fill="none" stroke="#ef4444" stroke-width="3" stroke-dasharray="6,4"/>
+  <text x="300" y="105" font-size="12" font-weight="bold" fill="#dc2626" text-anchor="middle">东南信风减弱 · 东太平洋水温异常升高</text>
+</svg>

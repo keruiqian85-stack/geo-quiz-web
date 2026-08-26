@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="100%">
+  <rect width="600" height="300" fill="#fffbeb" rx="12"/>
+  <text x="300" y="26" font-size="15" font-weight="bold" fill="#78350f" text-anchor="middle">中东波斯湾石油产区与霍尔木兹海峡输出示意图</text>
+  <rect x="140" y="60" width="220" height="120" rx="8" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
+  <text x="250" y="110" font-size="15" font-weight="bold" fill="#9a3412" text-anchor="middle">波斯湾石油集聚区</text>
+  <text x="250" y="135" font-size="11" fill="#c2410c" text-anchor="middle">世界石油储量/产量最大</text>
+
+  <!-- 霍尔木兹海峡 -->
+  <path d="M 360 120 L 450 120" fill="none" stroke="#dc2626" stroke-width="5"/>
+  <polygon points="450,120 438,114 438,126" fill="#dc2626"/>
+  <text x="410" y="105" font-size="12" font-weight="bold" fill="#dc2626">霍尔木兹海峡 (世界油阀)</text>
+
+  <rect x="420" y="160" width="120" height="70" rx="6" fill="#bae6fd"/>
+  <text x="480" y="195" font-size="12" font-weight="bold" fill="#0369a1" text-anchor="middle">外运至东亚</text>
+  <text x="480" y="215" font-size="12" font-weight="bold" fill="#0369a1" text-anchor="middle">西欧与北美</text>
+</svg>

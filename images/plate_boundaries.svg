@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="100%">
+  <rect width="600" height="300" fill="#f8fafc" rx="12"/>
+  <text x="300" y="26" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">板块边界类型（生长边界与消亡边界）示意图</text>
+  <!-- 左：生长边界（张裂） -->
+  <g transform="translate(30, 50)">
+    <text x="120" y="20" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">【生长边界（张裂分离）】</text>
+    <rect x="20" y="80" width="90" height="70" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
+    <rect x="130" y="80" width="90" height="70" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
+    <path d="M 50 115 L 10 115" fill="none" stroke="#dc2626" stroke-width="3"/>
+    <polygon points="10,115 20,110 20,120" fill="#dc2626"/>
+    <path d="M 190 115 L 230 115" fill="none" stroke="#dc2626" stroke-width="3"/>
+    <polygon points="230,115 220,110 220,120" fill="#dc2626"/>
+    <text x="120" y="180" font-size="11" fill="#7c2d12" text-anchor="middle">形成：裂谷 / 海洋 / 大洋中脊</text>
+  </g>
+
+  <!-- 右：消亡边界（碰撞挤压） -->
+  <g transform="translate(320, 50)">
+    <text x="120" y="20" font-size="13" font-weight="bold" fill="#2563eb" text-anchor="middle">【消亡边界（碰撞挤压）】</text>
+    <!-- 大陆板块与大洋板块俯冲 -->
+    <polygon points="120,70 180,40 230,140 120,140" fill="#cbd5e1" stroke="#334155" stroke-width="2"/>
+    <polygon points="10,100 130,140 110,160 0,110" fill="#93c5fd" stroke="#2563eb" stroke-width="2"/>
+    <text x="190" y="110" font-size="11" font-weight="bold" fill="#1e293b">褶皱山系</text>
+    <text x="100" y="180" font-size="11" font-weight="bold" fill="#1e40af">海沟俯冲带</text>
+  </g>
+</svg>

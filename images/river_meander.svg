@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="100%" height="100%">
+  <rect width="600" height="320" fill="#f8fafc" rx="12"/>
+  <text x="300" y="28" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">河流弯曲河段（凹岸侵蚀、凸岸堆积）示意图</text>
+
+  <!-- 弯曲河道 -->
+  <path d="M 40 40 Q 280 40 280 160 Q 280 280 520 280 L 520 230 Q 340 230 340 160 Q 340 90 40 90 Z" fill="#7dd3fc" stroke="#0284c7" stroke-width="2"/>
+
+  <!-- 凹岸冲刷箭头 -->
+  <path d="M 80 65 Q 260 65 300 120" fill="none" stroke="#dc2626" stroke-width="4"/>
+  <polygon points="300,120 296,108 288,118" fill="#dc2626"/>
+  <rect x="290" y="70" width="130" height="24" rx="4" fill="#fee2e2"/>
+  <text x="355" y="87" font-size="12" font-weight="bold" fill="#dc2626" text-anchor="middle">凹岸：受冲刷侵蚀 (建港口)</text>
+
+  <!-- 凸岸泥沙堆积沙洲 -->
+  <path d="M 230 160 Q 260 160 270 190 Q 230 190 230 160 Z" fill="#fde047" stroke="#ca8a04"/>
+  <rect x="110" y="200" width="150" height="24" rx="4" fill="#fef08a"/>
+  <text x="185" y="217" font-size="12" font-weight="bold" fill="#854d0e" text-anchor="middle">凸岸：水流缓慢泥沙堆积 (聚落/农耕)</text>
+
+  <rect x="40" y="270" width="520" height="36" rx="6" fill="#e0f2fe"/>
+  <text x="300" y="293" font-size="13" font-weight="bold" fill="#0369a1" text-anchor="middle">💡 水流受惯性离心力作用冲向凹岸，底部环流将泥沙带至凸岸沉积</text>
+</svg>

@@ -1,0 +1,7 @@
+ai_config.json
+new_questions.txt
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+Thumbs.db

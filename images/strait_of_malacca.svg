@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="100%">
+  <rect width="600" height="300" fill="#f0f9ff" rx="12"/>
+  <text x="300" y="26" font-size="15" font-weight="bold" fill="#0369a1" text-anchor="middle">马六甲海峡——世界航运“十字路口”示意图</text>
+  <!-- 马来半岛 (上) 与 苏门答腊岛 (下) -->
+  <polygon points="120,45 380,45 340,110 180,110" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
+  <text x="260" y="80" font-size="13" font-weight="bold" fill="#9a3412">马来半岛</text>
+
+  <polygon points="160,180 440,180 400,245 120,245" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/>
+  <text x="280" y="215" font-size="13" font-weight="bold" fill="#166534">苏门答腊岛</text>
+
+  <!-- 中间狭长海峡 -->
+  <rect x="180" y="125" width="200" height="40" rx="4" fill="#38bdf8"/>
+  <text x="280" y="150" font-size="13" font-weight="bold" fill="#0c4a6e" text-anchor="middle">【马六甲海峡】</text>
+
+  <text x="70" y="150" font-size="13" font-weight="bold" fill="#2563eb">太平洋 ➔</text>
+  <text x="470" y="150" font-size="13" font-weight="bold" fill="#2563eb">➔ 印度洋</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="100%">
+  <rect width="600" height="300" fill="#fffbeb" rx="12"/>
+  <text x="300" y="26" font-size="15" font-weight="bold" fill="#92400e" text-anchor="middle">黄土高原小流域综合治理模式（保塬、护坡、固沟）示意图</text>
+  <!-- 塬面、缓坡、沟谷 -->
+  <g transform="translate(60, 50)">
+    <!-- 塬面 -->
+    <rect x="0" y="30" width="140" height="40" fill="#fde68a" stroke="#d97706" stroke-width="2"/>
+    <text x="70" y="55" font-size="12" font-weight="bold" fill="#78350f" text-anchor="middle">【塬面】保塬工程</text>
+    <text x="70" y="85" font-size="10" fill="#b45309" text-anchor="middle">平整土地 · 营造护田林网</text>
+
+    <!-- 缓坡 -->
+    <polygon points="140,30 280,120 280,160 140,70" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/>
+    <text x="210" y="90" font-size="12" font-weight="bold" fill="#15803d" text-anchor="middle">【坡面】护坡工程</text>
+    <text x="210" y="125" font-size="10" fill="#166534" text-anchor="middle">修筑水平梯田 · 封坡育草</text>
+
+    <!-- 沟谷 -->
+    <polygon points="280,120 440,160 440,200 280,160" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
+    <text x="360" y="150" font-size="12" font-weight="bold" fill="#9a3412" text-anchor="middle">【沟谷】固沟工程</text>
+    <text x="360" y="185" font-size="10" fill="#c2410c" text-anchor="middle">打坝淤地 · 建设拦沙蓄水坝</text>
+  </g>
+</svg>

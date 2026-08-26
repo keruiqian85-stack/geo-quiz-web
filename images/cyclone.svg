@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="100%">
+  <rect width="600" height="300" fill="#f8fafc" rx="12"/>
+  <text x="300" y="26" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">北半球气旋（低压中心）气流运动与降水示意图</text>
+  <circle cx="300" cy="150" r="40" fill="#bae6fd" stroke="#0284c7" stroke-width="2"/>
+  <text x="300" y="156" font-size="20" font-weight="bold" fill="#0369a1" text-anchor="middle">低 (L)</text>
+  <circle cx="300" cy="150" r="80" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+  <circle cx="300" cy="150" r="120" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <!-- 逆时针向中心辐合 -->
+  <path d="M 380 60 Q 320 80 320 110" fill="none" stroke="#dc2626" stroke-width="3"/>
+  <polygon points="320,110 325,98 315,100" fill="#dc2626"/>
+
+  <path d="M 420 180 Q 380 200 340 180" fill="none" stroke="#dc2626" stroke-width="3"/>
+  <polygon points="340,180 352,185 348,175" fill="#dc2626"/>
+
+  <text x="300" y="280" font-size="12" font-weight="bold" fill="#0369a1" text-anchor="middle">水平方向：逆时针辐合；垂直方向：中心强上升气流 ➔ 阴雨/台风天气</text>
+</svg>

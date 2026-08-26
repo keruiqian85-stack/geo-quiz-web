@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="100%">
+  <rect width="600" height="300" fill="#f8fafc" rx="12"/>
+  <text x="300" y="26" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">成熟森林土壤垂直剖面分层示意图</text>
+  <g transform="translate(100, 45)">
+    <!-- 有机层/枯枝落叶层 -->
+    <rect x="0" y="0" width="180" height="30" fill="#3f2e1a"/>
+    <text x="200" y="20" font-size="12" font-weight="bold" fill="#3f2e1a">① 有机质层（枯枝落叶与未完全分解有机质）</text>
+
+    <!-- 腐殖质层 -->
+    <rect x="0" y="30" width="180" height="50" fill="#5c4033"/>
+    <text x="200" y="60" font-size="12" font-weight="bold" fill="#5c4033">② 腐殖质层（肥力最高，深黑/暗褐色）</text>
+
+    <!-- 淋溶层 -->
+    <rect x="0" y="80" width="180" height="45" fill="#d2b48c"/>
+    <text x="200" y="105" font-size="12" font-weight="bold" fill="#854d0e">③ 淋溶层（水溶性矿物随水下渗淋失，色浅）</text>
+
+    <!-- 淀积层 -->
+    <rect x="0" y="125" width="180" height="55" fill="#a0522d"/>
+    <text x="200" y="155" font-size="12" font-weight="bold" fill="#a0522d">④ 淀积层（上层淋溶物质在此集聚粘化）</text>
+
+    <!-- 母质层与基岩 -->
+    <rect x="0" y="180" width="180" height="50" fill="#808080"/>
+    <text x="200" y="210" font-size="12" font-weight="bold" fill="#4b5563">⑤ 成土母质层 / 基岩（风化碎屑矿物质源头）</text>
+  </g>
+</svg>

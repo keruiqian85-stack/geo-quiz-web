@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="100%">
+  <rect width="600" height="300" fill="#f8fafc" rx="12"/>
+  <text x="300" y="26" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">大气垂直分层与气温垂直变化示意图</text>
+  <!-- 坐标轴 -->
+  <line x1="80" y1="260" x2="550" y2="260" stroke="#334155" stroke-width="2"/>
+  <line x1="80" y1="260" x2="80" y2="40" stroke="#334155" stroke-width="2"/>
+  <text x="550" y="278" font-size="11" fill="#64748b">气温 (℃)</text>
+  <text x="75" y="38" font-size="11" fill="#64748b" text-anchor="end">高度 (km)</text>
+
+  <!-- 高度分界线 -->
+  <line x1="80" y1="200" x2="550" y2="200" stroke="#94a3b8" stroke-dasharray="4,4"/>
+  <line x1="80" y1="110" x2="550" y2="110" stroke="#94a3b8" stroke-dasharray="4,4"/>
+  <text x="50" y="205" font-size="11" fill="#0284c7">约12km</text>
+  <text x="50" y="115" font-size="11" fill="#0284c7">约50km</text>
+
+  <!-- 气温曲线 -->
+  <!-- 对流层：随高度降低 -->
+  <line x1="280" y1="260" x2="160" y2="200" stroke="#ef4444" stroke-width="3"/>
+  <!-- 平流层：随高度升高 -->
+  <line x1="160" y1="200" x2="260" y2="110" stroke="#ef4444" stroke-width="3"/>
+  <!-- 高层大气：先降后升 -->
+  <path d="M 260 110 L 140 60 L 320 40" fill="none" stroke="#ef4444" stroke-width="3"/>
+
+  <!-- 文字说明 -->
+  <text x="380" y="235" font-size="13" font-weight="bold" fill="#0284c7">【对流层】(对流旺盛，天气复杂)</text>
+  <text x="380" y="160" font-size="13" font-weight="bold" fill="#059669">【平流层】(臭氧层吸紫外线，利于飞行)</text>
+  <text x="380" y="80" font-size="13" font-weight="bold" fill="#6366f1">【高层大气】(电离层反射无线电短波)</text>
+</svg>

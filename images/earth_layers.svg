@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="crustGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8B5A2B"/>
+      <stop offset="100%" stop-color="#CD853F"/>
+    </linearGradient>
+    <linearGradient id="mantleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF7F50"/>
+      <stop offset="100%" stop-color="#FF4500"/>
+    </linearGradient>
+    <linearGradient id="coreOutGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#FFA500"/>
+    </linearGradient>
+    <linearGradient id="coreInGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFE0"/>
+      <stop offset="100%" stop-color="#FFFACD"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="320" fill="#f8fafc" rx="12"/>
+  <text x="300" y="30" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">地球内部圈层结构示意图</text>
+
+  <!-- 圈层圆弧阶梯 -->
+  <g transform="translate(150, 40)">
+    <!-- 地幔大扇形 -->
+    <path d="M 0 0 L 260 0 A 260 260 0 0 1 0 260 Z" fill="url(#mantleGrad)" stroke="#333" stroke-width="1.5"/>
+    <!-- 外核扇形 -->
+    <path d="M 0 0 L 160 0 A 160 160 0 0 1 0 160 Z" fill="url(#coreOutGrad)" stroke="#333" stroke-width="1.5"/>
+    <!-- 内核扇形 -->
+    <path d="M 0 0 L 80 0 A 80 80 0 0 1 0 80 Z" fill="url(#coreInGrad)" stroke="#333" stroke-width="1.5"/>
+    <!-- 地壳薄层 -->
+    <path d="M 260 0 A 260 260 0 0 1 0 260 L 0 250 A 250 250 0 0 0 250 0 Z" fill="url(#crustGrad)"/>
+
+    <!-- 软流层示意 (红线标记) -->
+    <path d="M 235 0 A 235 235 0 0 1 0 235" fill="none" stroke="#dc2626" stroke-width="4" stroke-dasharray="6,4"/>
+  </g>
+
+  <!-- 标注说明 -->
+  <g font-size="13" font-family="sans-serif" fill="#0f172a">
+    <!-- 地壳与莫霍面 -->
+    <line x1="395" y1="65" x2="460" y2="65" stroke="#333" stroke-width="1.2"/>
+    <text x="465" y="70" font-weight="bold">地壳 (平均厚度约17km/大陆33km)</text>
+
+    <line x1="385" y1="85" x2="460" y2="85" stroke="#dc2626" stroke-width="1.2"/>
+    <text x="465" y="90" fill="#dc2626" font-weight="bold">【软流层】(岩浆发源地，上地幔上部)</text>
+
+    <line x1="375" y1="120" x2="460" y2="120" stroke="#333" stroke-width="1.2"/>
+    <text x="465" y="125">地幔 (莫霍面至古登堡面之间)</text>
+
+    <line x1="280" y1="170" x2="460" y2="170" stroke="#333" stroke-width="1.2"/>
+    <text x="465" y="175">外核 (液态/熔融态，产生地磁场)</text>
+
+    <line x1="200" y1="230" x2="460" y2="230" stroke="#333" stroke-width="1.2"/>
+    <text x="465" y="235">内核 (固态高压高温金属球)</text>
+  </g>
+
+  <rect x="20" y="270" width="560" height="36" rx="6" fill="#e2e8f0"/>
+  <text x="300" y="293" font-size="13" fill="#334155" text-anchor="middle">💡 岩石圈范围 = 地壳 + 上地幔顶部（软流层以上坚硬岩石部分）</text>
+</svg>

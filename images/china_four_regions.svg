@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="100%">
+  <rect width="600" height="300" fill="#f8fafc" rx="12"/>
+  <text x="300" y="26" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">中国四大地理区域划分与分界线示意图</text>
+  <!-- 四大块 -->
+  <!-- 西北干旱半干旱区 -->
+  <rect x="60" y="45" width="220" height="100" rx="8" fill="#fef08a" stroke="#ca8a04" stroke-width="2"/>
+  <text x="170" y="90" font-size="14" font-weight="bold" fill="#854d0e" text-anchor="middle">西北地区</text>
+  <text x="170" y="110" font-size="11" fill="#a16207" text-anchor="middle">(干旱 · 灌溉农业/绿洲农业)</text>
+
+  <!-- 北方地区 -->
+  <rect x="300" y="45" width="240" height="100" rx="8" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
+  <text x="420" y="90" font-size="14" font-weight="bold" fill="#9a3412" text-anchor="middle">北方地区</text>
+  <text x="420" y="110" font-size="11" fill="#c2410c" text-anchor="middle">(半湿润 · 旱地耕作 · 小麦)</text>
+
+  <!-- 青藏高寒区 -->
+  <rect x="60" y="160" width="220" height="110" rx="8" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="170" y="205" font-size="14" font-weight="bold" fill="#4338ca" text-anchor="middle">青藏地区</text>
+  <text x="170" y="225" font-size="11" fill="#4f46e5" text-anchor="middle">(高寒 · 河谷农业 · 青稞)</text>
+
+  <!-- 南方地区 -->
+  <rect x="300" y="160" width="240" height="110" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="420" y="205" font-size="14" font-weight="bold" fill="#166534" text-anchor="middle">南方地区</text>
+  <text x="420" y="225" font-size="11" fill="#15803d" text-anchor="middle">(湿热 · 水田耕作 · 水稻)</text>
+
+  <line x1="300" y1="152" x2="540" y2="152" stroke="#dc2626" stroke-width="3"/>
+  <text x="420" y="150" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">秦岭—淮河线 (1月0℃ / 800mm)</text>
+</svg>

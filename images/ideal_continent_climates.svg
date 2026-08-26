@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="100%">
+  <rect width="600" height="300" fill="#f8fafc" rx="12"/>
+  <text x="300" y="24" font-size="14" font-weight="bold" fill="#0f172a" text-anchor="middle">理想大陆气候类型与气压带风带对应模式图</text>
+  <!-- 理想大陆框架 -->
+  <rect x="150" y="45" width="300" height="230" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+  <line x1="150" y1="275" x2="450" y2="275" stroke="#dc2626" stroke-width="2"/>
+  <text x="460" y="278" font-size="10" fill="#dc2626">0° (赤道多雨带)</text>
+  <line x1="150" y1="200" x2="450" y2="200" stroke="#ea580c" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <text x="460" y="205" font-size="10" fill="#ea580c">30°N (副热带高压)</text>
+  <line x1="150" y1="120" x2="450" y2="120" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <text x="460" y="125" font-size="10" fill="#0284c7">60°N (盛行西风带)</text>
+
+  <!-- 气候填色 -->
+  <!-- 热带雨林 -->
+  <rect x="150" y="245" width="300" height="30" fill="#15803d"/>
+  <text x="300" y="265" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">热带雨林气候</text>
+
+  <!-- 西岸温带海洋 -->
+  <rect x="150" y="80" width="100" height="80" fill="#38bdf8"/>
+  <text x="200" y="125" font-size="11" font-weight="bold" fill="#0369a1" text-anchor="middle">温带海洋性</text>
+
+  <!-- 西岸地中海 -->
+  <rect x="150" y="160" width="100" height="50" fill="#fde047"/>
+  <text x="200" y="190" font-size="11" font-weight="bold" fill="#854d0e" text-anchor="middle">地中海气候</text>
+
+  <!-- 东岸季风 -->
+  <rect x="350" y="120" width="100" height="90" fill="#fed7aa"/>
+  <text x="400" y="170" font-size="11" font-weight="bold" fill="#9a3412" text-anchor="middle">季风气候区</text>
+</svg>

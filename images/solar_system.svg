@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="100%">
+  <rect width="600" height="300" fill="#090d16" rx="12"/>
+  <text x="300" y="28" font-size="15" font-weight="bold" fill="#f8fafc" text-anchor="middle">太阳系结构与八大行星轨道位置示意图</text>
+  <!-- 太阳 -->
+  <circle cx="40" cy="150" r="50" fill="#f59e0b" stroke="#fbbf24" stroke-width="3"/>
+  <text x="40" y="155" font-size="12" fill="#fff" font-weight="bold" text-anchor="middle">太阳</text>
+  <!-- 轨道弧线与行星 -->
+  <!-- 水星 -->
+  <ellipse cx="40" cy="150" rx="80" ry="60" fill="none" stroke="#334155" stroke-dasharray="3,3"/>
+  <circle cx="120" cy="150" r="5" fill="#94a3b8"/>
+  <text x="120" y="170" font-size="10" fill="#94a3b8" text-anchor="middle">水星</text>
+  <!-- 金星 -->
+  <ellipse cx="40" cy="150" rx="130" ry="75" fill="none" stroke="#334155" stroke-dasharray="3,3"/>
+  <circle cx="170" cy="150" r="8" fill="#fde047"/>
+  <text x="170" y="175" font-size="10" fill="#fde047" text-anchor="middle">金星</text>
+  <!-- 地球 -->
+  <ellipse cx="40" cy="150" rx="180" ry="90" fill="none" stroke="#38bdf8" stroke-dasharray="4,2"/>
+  <circle cx="220" cy="150" r="9" fill="#0284c7" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="220" y="180" font-size="11" font-weight="bold" fill="#38bdf8" text-anchor="middle">地球(3)</text>
+  <!-- 火星 -->
+  <ellipse cx="40" cy="150" rx="230" ry="105" fill="none" stroke="#334155" stroke-dasharray="3,3"/>
+  <circle cx="270" cy="150" r="7" fill="#ef4444"/>
+  <text x="270" y="175" font-size="10" fill="#ef4444" text-anchor="middle">火星</text>
+  <!-- 小行星带 -->
+  <path d="M 300 40 Q 330 150 300 260" fill="none" stroke="#ca8a04" stroke-width="6" stroke-dasharray="2,5"/>
+  <text x="315" y="275" font-size="10" fill="#facc15">小行星带</text>
+  <!-- 木星 -->
+  <circle cx="360" cy="150" r="22" fill="#d97706"/>
+  <text x="360" y="190" font-size="11" fill="#fed7aa" text-anchor="middle">木星(巨行星)</text>
+  <!-- 土星 -->
+  <circle cx="430" cy="150" r="16" fill="#fef08a"/>
+  <ellipse cx="430" cy="150" rx="26" ry="7" fill="none" stroke="#ca8a04" stroke-width="3"/>
+  <text x="430" y="185" font-size="11" fill="#fef08a" text-anchor="middle">土星</text>
+  <!-- 天王星 -->
+  <circle cx="500" cy="150" r="12" fill="#67e8f9"/>
+  <text x="500" y="180" font-size="10" fill="#67e8f9" text-anchor="middle">天王星</text>
+  <!-- 海王星 -->
+  <circle cx="560" cy="150" r="12" fill="#3b82f6"/>
+  <text x="560" y="180" font-size="10" fill="#93c5fd" text-anchor="middle">海王星</text>
+  <rect x="40" y="235" width="520" height="28" rx="4" fill="#1e293b"/>
+  <text x="300" y="253" font-size="11" fill="#94a3b8" text-anchor="middle">小行星带位于【火星轨道】与【木星轨道】之间；类地行星包括水、金、地、火。</text>
+</svg>

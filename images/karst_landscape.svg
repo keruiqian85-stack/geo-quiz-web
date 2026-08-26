@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="100%" height="100%">
+  <rect width="600" height="320" fill="#f8fafc" rx="12"/>
+  <text x="300" y="28" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">喀斯特（岩溶）地貌景观特征示意图</text>
+
+  <!-- 地表石灰岩峰林与天坑 -->
+  <path d="M 20 220 L 70 80 L 120 220 L 160 110 L 210 220 L 270 220 L 300 250 L 330 220 L 400 90 L 470 220 L 580 220 L 580 310 L 20 310 Z" fill="#cbd5e1" stroke="#475569" stroke-width="2"/>
+
+  <!-- 地表峰林标注 -->
+  <text x="95" y="70" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">峰林 / 峰丛（地表流水溶蚀）</text>
+  <text x="300" y="210" font-size="12" fill="#0284c7" text-anchor="middle">溶沟 / 天坑</text>
+
+  <!-- 地下溶洞大空腔 -->
+  <ellipse cx="280" cy="275" rx="110" ry="32" fill="#475569"/>
+  <text x="280" y="280" font-size="13" font-weight="bold" fill="#f8fafc" text-anchor="middle">地下溶洞（地下水溶蚀）</text>
+
+  <!-- 石钟乳（上）与石笋（下）与石柱 -->
+  <!-- 钟乳石 (向下尖) -->
+  <polygon points="210,243 216,243 213,260" fill="#fde047"/>
+  <polygon points="230,243 238,243 234,265" fill="#fde047"/>
+  <text x="210" y="235" font-size="11" fill="#b45309">石钟乳</text>
+
+  <!-- 石笋 (向上尖) -->
+  <polygon points="230,307 238,307 234,285" fill="#fde047"/>
+  <text x="230" y="318" font-size="11" fill="#b45309">石笋</text>
+
+  <!-- 石柱 -->
+  <rect x="340" y="243" width="10" height="64" fill="#fde047"/>
+  <text x="380" y="278" font-size="11" fill="#b45309">石柱(钙华沉积)</text>
+
+  <rect x="20" y="5" width="160" height="24" rx="4" fill="#e2e8f0"/>
+  <text x="100" y="21" font-size="11" fill="#475569" text-anchor="middle">可溶性岩石：石灰岩</text>
+</svg>
