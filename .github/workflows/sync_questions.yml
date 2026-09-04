@@ -1,49 +1,80 @@
-name: Sync and Update Geography Questions
+name: Generate questions for review
 
 on:
+  schedule:
+    # Daily check at 09:17 Beijing time; a date gate selects every third day.
+    - cron: '17 1 * * *'
   workflow_dispatch:
     inputs:
       topic:
         description: 出题专题或模块名称
         required: true
-        default: 自然地理基础要素
+        default: 高中地理基础与区域综合
         type: string
       count:
-        description: 生成题目数量（1—20）
+        description: 候选题数量（1—2）
         required: true
-        default: 5
+        default: 2
         type: number
 
 permissions:
   contents: write
+  pull-requests: write
+
+concurrency:
+  group: geography-question-review
+  cancel-in-progress: false
 
 jobs:
   generate:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Generate and validate questions
+      - name: Check schedule and pending review
+        id: gate
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          python -c "import os; from datetime import datetime,date,timezone; due=os.environ['EVENT_NAME']=='workflow_dispatch' or (datetime.now(timezone.utc).date()-date(2026,9,4)).days%3==0; print('due='+str(due).lower())" >> "$GITHUB_OUTPUT"
+          pending=$(gh pr list --base main --state open --limit 1000 --json headRefName --jq '[.[] | select(.headRefName | startswith("codex/quiz-review-"))] | length')
+          echo "pending=$pending" >> "$GITHUB_OUTPUT"
+          echo "Pending review batches: $pending. Skip generation until they are merged or closed." >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Generate and validate candidates
+        if: steps.gate.outputs.due == 'true' && steps.gate.outputs.pending == '0'
         env:
           AI_API_KEY: ${{ secrets.AI_API_KEY }}
           AI_BASE_URL: ${{ secrets.AI_BASE_URL }}
           AI_MODEL: ${{ secrets.AI_MODEL }}
-          TOPIC: ${{ inputs.topic }}
-          QUESTION_COUNT: ${{ inputs.count }}
+          TOPIC: ${{ inputs.topic || '高中地理基础与区域综合' }}
+          QUESTION_COUNT: ${{ inputs.count || 2 }}
         run: |
-          python ai_generate_questions.py "$TOPIC" "$QUESTION_COUNT"
+          python prepare_review.py --topic "$TOPIC" --count "$QUESTION_COUNT" --body "$RUNNER_TEMP/quiz-review.md"
           python test_quiz.py
+          python -m unittest test_review.py
 
-      - name: Commit generated questions
+      - name: Submit for human review only
+        if: steps.gate.outputs.due == 'true' && steps.gate.outputs.pending == '0'
         run: |
+          branch="codex/quiz-review-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          git switch -c "$branch"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add questions_data.json questions.js
-          git diff --cached --quiet || git commit -m "content: update geography question bank"
-          git push
+          git commit -m "content: propose geography questions for review"
+          git push origin "HEAD:refs/heads/$branch"
+          gh pr create --base main --head "$branch" --title '待审核：新增地理题目' --body-file "$RUNNER_TEMP/quiz-review.md" >> "$GITHUB_STEP_SUMMARY"
+          # No auto-approval, auto-merge or deployment. Only the user merges.

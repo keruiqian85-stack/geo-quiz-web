@@ -53,6 +53,8 @@ python test_quiz.py
 
 ## AI 辅助生成（可选）
 
+线上已提供“每 3 天 2 题 → Pull Request 人工审核 → 合并后发布”的流程，配置及审核操作见 [发布指南](GITHUB_DEPLOY_AND_UPDATE_GUIDE.md#可选github-actions-生成题目)。下面的命令只用于本地生成，运行后也须自行审核再上传。
+
 在 PowerShell 中临时设置环境变量后运行：
 
 ```powershell

@@ -36,7 +36,7 @@ def validate_question(question: dict[str, Any], label: str) -> None:
         raise ValueError(f"{label}必须包含 4 个非空文本选项")
     if len({option.strip() for option in options}) != 4:
         raise ValueError(f"{label}的 4 个选项不能重复")
-    if question.get("answer") not in (0, 1, 2, 3):
+    if type(question.get("answer")) is not int or question["answer"] not in (0, 1, 2, 3):
         raise ValueError(f"{label}的答案索引必须是 0、1、2 或 3")
 
     image = question.get("image")

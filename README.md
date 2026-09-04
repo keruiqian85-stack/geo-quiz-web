@@ -31,7 +31,8 @@ python -m http.server 8000
 - `images/`：题目配图
 - `import_questions.py`：文本导入与 JSON → JS 同步工具
 - `test_quiz.py`：题库和页面结构校验
-- `.github/workflows/sync_questions.yml`：可选的人工触发式 AI 出题流程
+- `.github/workflows/sync_questions.yml`：每 3 天生成 2 道候选题，人工审核合并后上线
+- `prepare_review.py`、`test_review.py`：候选题校验、查重及审核流程测试
 
 更新题库时必须保持 `questions_data.json` 与 `questions.js` 同步。具体操作见 [HOW_TO_UPDATE_QUESTIONS.md](HOW_TO_UPDATE_QUESTIONS.md)，发布步骤见 [GITHUB_DEPLOY_AND_UPDATE_GUIDE.md](GITHUB_DEPLOY_AND_UPDATE_GUIDE.md)。
 
